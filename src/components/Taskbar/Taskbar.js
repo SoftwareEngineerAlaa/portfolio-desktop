@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Taskbar.css"; // Again, style appropriately
+import "./Taskbar.css";
 
 const Taskbar = () => {
   const [selected, setSelected] = useState(true);
@@ -15,17 +15,25 @@ const Taskbar = () => {
   };
 
   const time = getTime();
+
+  const handleTaskbarItemClick = () => {
+    setSelected(!selected);
+  };
+
   return (
     <div className="taskbar">
       <button className="start-button unselected">🛸Start</button>
       <div className="taskbar-icons">
-        <div className={`taskbar-icon ${selected ? "selected" : "unselected"}`}>
-          Welcome
+        <div
+          className={`taskbar-icon ${selected ? "selected" : "unselected"}`}
+          onClick={handleTaskbarItemClick}
+        >
+          📁 Welcome
         </div>
-        <div className="taskbar-icon unselected">📁Recent</div>
-        <div className="taskbar-icon unselected">📧E-Mail</div>
-        <div className="taskbar-icon unselected">🌐Browser</div>
-        <div className="taskbar-icon unselected">📷Gallery</div>
+        <div className="taskbar-icon unselected">📁 Recent</div>
+        <div className="taskbar-icon unselected">📧 E-Mail</div>
+        <div className="taskbar-icon unselected">🌐 Browser</div>
+        <div className="taskbar-icon unselected">🖼️ Gallery</div>
       </div>
       <div className="taskbar-clock selected">{time}</div>
     </div>

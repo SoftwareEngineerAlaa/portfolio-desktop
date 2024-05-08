@@ -7,6 +7,7 @@ import "./Windows95.css";
 function Windows95() {
   return (
     <div className="Windows95">
+      <h1 className="green-light">🟢</h1>
       <img className="oldPCimg" src={oldPCimg} alt="Old PC" />
       <div className="OS">
         <Desktop />
