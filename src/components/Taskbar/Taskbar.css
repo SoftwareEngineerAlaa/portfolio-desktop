@@ -1,0 +1,62 @@
+.taskbar {
+  position: absolute;
+  width: 100%;
+  height: 35px;
+  background: rgba(195, 195, 195);
+  color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+}
+
+.start-button {
+  display: flex;
+  flex-direction: row;
+  font-size: 12px;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  padding: 10px 10px;
+  height: 90%;
+  width: 80px;
+  background: rgb(195, 195, 195, 0.5);
+}
+
+.taskbar-icons {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px;
+}
+
+.taskbar-icon {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  width: 20%;
+  height: 70%;
+  padding: 0 5px;
+  background: rgb(195, 195, 195, 0.5);
+  cursor: pointer;
+}
+
+.taskbar-clock {
+  text-align: center;
+  width: 100px;
+  background: rgb(195, 195, 195, 0.5);
+}
+
+.selected {
+  border: 2px solid;
+  border-color: #808080 #fff #fff #808080;
+}
+
+.unselected {
+  /* opposite of  box-shadow: inset 0 0 5px rgba(27, 27, 27, 0.8)*/
+  border: 2px solid;
+  border-color: #fff #808080 #808080 #fff;
+}
